@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nevhim Restaurant</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,.9);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#d4af37;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:70px;
+color:#fff;
+}
+
+.hero span{
+color:#d4af37;
+}
+
+.hero p{
+margin-top:15px;
+font-size:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#d4af37;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1b1b1b;
+padding:25px;
+border-radius:20px;
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.price{
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+}
+
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input{
+padding:15px;
+border:none;
+border-radius:10px;
+background:#1d1d1d;
+color:white;
+}
+
+button{
+padding:15px;
+border:none;
+background:#d4af37;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+background:black;
+padding:30px;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:28px;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+NEVHİM
+</div>
+
+<ul>
+<li><a href="#anasayfa">Ana Sayfa</a></li>
+<li><a href="#menu">Menü</a></li>
+<li><a href="#galeri">Galeri</a></li>
+<li><a href="#rezervasyon">Rezervasyon</a></li>
+<li><a href="#iletisim">İletişim</a></li>
+</ul>
+
+</nav>
+
+<section class="hero" id="anasayfa">
+
+<div>
+
+<h1>NEVHİM <span>RESTAURANT</span></h1>
+
+<p>
+Lezzetin ve zarafetin buluştuğu yer
+</p>
+
+<a href="#menu" class="btn">
+Menüyü İncele
+</a>
+
+</div>
+
+</section>
+
+<section id="menu">
+
+<h2 class="section-title">
+Özel Menü
+</h2>
+
+<div class="menu-grid">
+
+<div class="card">
+<h3>Nevhim Karışık Izgara</h3>
+<p>Şefimizin özel seçimi.</p>
+<div class="price">₺690</div>
+</div>
+
+<div class="card">
+<h3>Dana Lokum</h3>
+<p>Özel sos eşliğinde.</p>
+<div class="price">₺580</div>
+</div>
+
+<div class="card">
+<h3>Izgara Somon</h3>
+<p>Akdeniz usulü.</p>
+<div class="price">₺520</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="galeri">
+
+<h2 class="section-title">
+Galeri
+</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9">
+
+<img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b">
+
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
+
+</div>
+
+</section>
+
+<section id="rezervasyon">
+
+<h2 class="section-title">
+Rezervasyon
+</h2>
+
+<form id="reservationForm"
+action="https://formsubmit.co/nevhim43@gmail.com"
+method="POST">
+
+<input
+type="text"
+name="adSoyad"
+placeholder="Ad Soyad"
+required>
+
+<input
+type="tel"
+name="telefon"
+placeholder="Telefon"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="E-Posta"
+required>
+
+<input
+type="date"
+name="tarih"
+required>
+
+<input
+type="time"
+name="saat"
+required>
+
+<input
+type="number"
+name="kisi"
+placeholder="Kişi Sayısı"
+required>
+
+<input
+type="hidden"
+name="_next"
+value="https://nevhim01.github.io/nevhim/tesekkurler.html">
+
+<button type="submit">
+Rezervasyon Gönder
+</button>
+
+</form>
+
+</section>
+
+<section id="iletisim">
+
+<h2 class="section-title">
+İletişim
+</h2>
+
+<div class="contact">
+
+<p>📍 Nevhim Restaurant, İstanbul</p>
+
+<br>
+
+<p>📞 +90 555 555 55 55</p>
+
+<br>
+
+<p>✉ info@nevhim.com</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Nevhim Restaurant
+</footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/905555555555">
+💬
+</a>
+
+<script>
+
+document.getElementById("reservationForm")
+.addEventListener("submit", function(){
+
+localStorage.setItem(
+"rez_ad",
+document.querySelector('[name="adSoyad"]').value
+);
+
+localStorage.setItem(
+"rez_tel",
+document.querySelector('[name="telefon"]').value
+);
+
+localStorage.setItem(
+"rez_mail",
+document.querySelector('[name="email"]').value
+);
+
+localStorage.setItem(
+"rez_tarih",
+document.querySelector('[name="tarih"]').value
+);
+
+localStorage.setItem(
+"rez_saat",
+document.querySelector('[name="saat"]').value
+);
+
+localStorage.setItem(
+"rez_kisi",
+document.querySelector('[name="kisi"]').value
+);
+
+});
+
+</script>
+
+</body>
+</html>

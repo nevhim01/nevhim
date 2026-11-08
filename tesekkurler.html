@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rezervasyon Alındı | Nevhim Restaurant</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.container{
+background:#1b1b1b;
+max-width:700px;
+width:100%;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 25px rgba(212,175,55,.15);
+}
+
+.success{
+font-size:70px;
+margin-bottom:20px;
+}
+
+h1{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.desc{
+color:#ccc;
+margin-bottom:30px;
+}
+
+.summary{
+background:#111;
+padding:25px;
+border-radius:15px;
+text-align:left;
+margin-bottom:30px;
+}
+
+.summary h2{
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.summary p{
+margin:10px 0;
+}
+
+.reservation-number{
+background:#222;
+padding:15px;
+border-radius:10px;
+margin-top:20px;
+font-weight:bold;
+text-align:center;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+font-weight:600;
+border-radius:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="success">✅</div>
+
+<h1>Rezervasyon Talebiniz Alındı</h1>
+
+<p class="desc">
+Nevhim Restaurant'ı tercih ettiğiniz için teşekkür ederiz.
+Rezervasyon bilgileriniz tarafımıza başarıyla ulaştı.
+</p>
+
+<div class="summary">
+
+<h2>Rezervasyon Özeti</h2>
+
+<p><strong>Ad Soyad:</strong> <span id="ad">-</span></p>
+
+<p><strong>Telefon:</strong> <span id="tel">-</span></p>
+
+<p><strong>E-Posta:</strong> <span id="mail">-</span></p>
+
+<p><strong>Tarih:</strong> <span id="tarih">-</span></p>
+
+<p><strong>Saat:</strong> <span id="saat">-</span></p>
+
+<p><strong>Kişi Sayısı:</strong> <span id="kisi">-</span></p>
+
+<div class="reservation-number">
+Rezervasyon No:
+<span id="rezNo"></span>
+</div>
+
+</div>
+
+<a href="index.html" class="btn">
+Ana Sayfaya Dön
+</a>
+
+</div>
+
+<script>
+
+document.getElementById("ad").textContent =
+localStorage.getItem("rez_ad") || "-";
+
+document.getElementById("tel").textContent =
+localStorage.getItem("rez_tel") || "-";
+
+document.getElementById("mail").textContent =
+localStorage.getItem("rez_mail") || "-";
+
+document.getElementById("tarih").textContent =
+localStorage.getItem("rez_tarih") || "-";
+
+document.getElementById("saat").textContent =
+localStorage.getItem("rez_saat") || "-";
+
+document.getElementById("kisi").textContent =
+localStorage.getItem("rez_kisi") || "-";
+
+let rezervasyonNo =
+"NVH-" + Math.floor(100000 + Math.random() * 900000);
+
+document.getElementById("rezNo").textContent =
+rezervasyonNo;
+
+</script>
+
+</body>
+</html>
